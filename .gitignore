@@ -29,3 +29,5 @@ composer.lock
 # Misc
 *.bak
 *.tmp 
+
+*.py

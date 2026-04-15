@@ -17,7 +17,7 @@
   <proprity name="og:type" content="website" />
   <proprity name="og:url" content="https://eaf-microservice.netlify.app/">
     <proprity name="og:image" content="assets/img/long_logo_light.png" />
-    <proprity name="og:site_name" content="EAF microservice" />
+    <proprity name="og:site_name" content="EAF microservice Co." />
     <proprity name="og:locale" content="fr_FR" />
     <proprity name="og:locale:alternate" content="en_US" />
     <proprity name="og:locale:alternate" content="ar_SA" />
@@ -42,8 +42,8 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5890832306883406"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5890832306883406"
+      crossorigin="anonymous"></script>
 </head>
 
 <body class="index-page">
@@ -55,16 +55,26 @@
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Acceuil</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#values">Valeurs</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Équipe</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#hero" class="active" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+          <li><a href="#values" data-i18n="nav.values">Valeurs</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#team" data-i18n="nav.team">Équipe</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          <li class="dropdown"><a href="javascript:void(0)"><span id="current-lang">FR</span> <i
+                class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="javascript:void(0)" onclick="changeLanguage('fr')">Français</a></li>
+              <li><a href="javascript:void(0)" onclick="changeLanguage('en')">English</a></li>
+              <li><a href="javascript:void(0)" onclick="changeLanguage('ar')">العربية</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:void(0)" onclick="toggleTheme()" class="theme-toggle"><i id="theme-icon"
+                class="bi bi-moon-fill"></i></a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <a class="btn-getstarted" href="#about">Commencer</a>
+      <!-- <a class="btn-getstarted" href="#about" data-i18n="nav.start">Commencer</a> -->
     </div>
   </header>
 
@@ -74,16 +84,16 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-            <h1>De meilleures solutions pour vôtre entreprise</h1>
-            <p>
+            <h1 data-i18n="hero.title">De meilleures solutions pour votre entreprise</h1>
+            <p data-i18n="hero.subtitle">
               Nous sommes une équipe talentueuse qui crée des outils, des
               applications et faire des formations...
             </p>
             <div class="d-flex">
-              <a href="#about" class="btn-get-started">Commencer</a>
+              <a href="#about" class="btn-get-started" data-i18n="hero.start">Commencer</a>
               <a href="https://youtu.be/biAFYbtxLsU" class="glightbox btn-watch-video d-flex align-items-center">
                 <i class="bi bi-play-circle"></i>
-                <span>Regarder la Vidéo</span></a>
+                <span data-i18n="hero.watch">Regarder la Vidéo</span></a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
@@ -152,7 +162,8 @@
               <img src="assets/img/clients/eaf-shoop.png" class="img-fluid" alt="EAF Shoop" style="height:50px" />
             </div>
             <div class="swiper-slide">
-              <img src="assets/img/clients/ass-chahid.png" class="img-fluid" alt="Association Chahid" style="height:50px" />
+              <img src="assets/img/clients/ass-chahid.png" class="img-fluid" alt="Association Chahid"
+                style="height:50px" />
             </div>
             <div class="swiper-slide">
               <img src="assets/img/clients/c_afaq.jpg" class="img-fluid" alt="Centre Afaq" style="height:50px" />
@@ -173,19 +184,19 @@
     <section id="about" class="about section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>À propos de nous</h2>
+        <h2 data-i18n="about.title">À propos de nous</h2>
       </div>
       <!-- End Section Title -->
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <p>
+            <p data-i18n="about.p1">
               EAF microservice est une entreprise de services numériques qui accompagne
               les petites et moyennes entreprises dans leur transformation digitale.
               Nous proposons des solutions informatiques sur mesure, accessibles et fiables,
               pour aider les PME à rester compétitives dans un environnement numérique en constante évolution.
             </p>
-            <p>
+            <p data-i18n="about.p2">
               Nous sommes spécialisés dans le développement de solutions
               innovantes et sur mesure, alliant expertise technique et
               accompagnement personnalisé.
@@ -196,22 +207,22 @@
             <ul>
               <li>
                 <i class="bi bi-check2-circle"></i>
-                <span>Des services adaptés à vos besoins spécifiques.</span>
+                <span data-i18n="about.li1">Des services adaptés à vos besoins spécifiques.</span>
               </li>
               <li>
                 <i class="bi bi-check2-circle"></i>
-                <span>Une équipe experte, engagée et réactive.</span>
+                <span data-i18n="about.li2">Une équipe experte, engagée et réactive.</span>
               </li>
               <li>
                 <i class="bi bi-check2-circle"></i>
-                <span>
+                <span data-i18n="about.li3">
                   Une démarche centrée sur la qualité et la satisfaction client.
                 </span>
               </li>
             </ul>
-            <p>
+            <p data-i18n="about.p3">
               Forts de nombreuses années d’expérience, nous accompagnons nos
-              clients dans leurs projets digitaux, professionnelles et techniques,
+              clients dans leurs projets digitaux, professionnels et techniques,
               avec rigueur et innovation.
             </p>
           </div>
@@ -227,27 +238,26 @@
           <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
             <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
               <h3>
-                <span>Une expertise reconnue </span>
-                <strong>au service de votre réussite</strong>
+                <span data-i18n="why.title1">Une expertise reconnue </span>
+                <strong data-i18n="why.title2">au service de votre réussite</strong>
               </h3>
-              <p>
+              <p data-i18n="why.p1">
                 Nous mettons à votre disposition une équipe passionnée et
                 expérimentée, prête à vous accompagner dans tous vos projets
                 avec rigueur et innovation.
               </p>
-              <p>
+              <p data-i18n="why.p2">
                 Proposer des solutions adaptées, sécurisées et abordables pour faciliter
                 l'accès aux technologies professionnelles des PME.
               </p>
             </div>
             <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
               <div class="faq-item faq-active">
-                <h3><span>01</span> Pourquoi choisir notre équipe ?</h3>
+                <h3><span>01</span> <span data-i18n="why.faq1.title">Pourquoi choisir notre équipe ?</span></h3>
                 <div class="faq-content">
                   <p>
-                    Nous allions expertise technique, écoute attentive et
-                    flexibilité pour répondre précisément à vos besoins et
-                    garantir votre satisfaction.
+                    <span data-i18n="why.faq1.desc">Nous allions expertise technique, écoute attentive et flexibilité
+                      pour répondre précisément à vos besoins et garantir votre satisfaction.</span>
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -255,12 +265,11 @@
               <!-- End Faq item-->
 
               <div class="faq-item">
-                <h3><span>02</span> Quels sont nos engagements qualité ?</h3>
+                <h3><span>02</span> <span data-i18n="why.faq2.title">Quels sont nos engagements qualité ?</span></h3>
                 <div class="faq-content">
                   <p>
-                    Chaque projet est suivi avec rigueur, transparence et un
-                    souci constant d’innovation pour assurer des résultats
-                    durables et performants.
+                    <span data-i18n="why.faq2.desc">Chaque projet est suivi avec rigueur, transparence et un souci
+                      constant d’innovation pour assurer des résultats durables et performants.</span>
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -269,13 +278,12 @@
 
               <div class="faq-item">
                 <h3>
-                  <span>03</span> Comment garantissons-nous votre satisfaction?
+                  <span>03</span> <span data-i18n="why.faq3.title">Comment garantissons-nous votre satisfaction?</span>
                 </h3>
                 <div class="faq-content">
                   <p>
-                    Par un accompagnement personnalisé, une communication
-                    transparente, et un engagement total à dépasser vos
-                    attentes.
+                    <span data-i18n="why.faq3.desc">Par un accompagnement personnalisé, une communication transparente,
+                      et un engagement total à dépasser vos attentes.</span>
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -298,7 +306,7 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-12 text-center">
-            <h3>Nos Valeurs</h3>
+            <h3 data-i18n="values.title">Nos Valeurs</h3>
             <p class="text-center">
               Nous croyons en l'importance de valeurs solides
               pour guider notre travail et nos relations avec nos clients.
@@ -309,29 +317,29 @@
           <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative value-item">
               <div class="icon"><i class="bi bi-cash-stack icon"></i></div>
-              <h4>Accessibilité</h4>
-              <p>Des tarifs transparents et adaptés aux budgets PME</p>
+              <h4 data-i18n="values.v1">Accessibilité</h4>
+              <p data-i18n="values.d1">Des tarifs transparents et adaptés aux budgets PME</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative value-item">
               <div class="icon"><i class="bi bi-people icon"></i></div>
-              <h4>Proximité</h4>
-              <p>Un interlocuteur dédié et un support réactif</p>
+              <h4 data-i18n="values.v2">Proximité</h4>
+              <p data-i18n="values.d2">Un interlocuteur dédié et un support réactif</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative value-item">
               <div class="icon"><i class="bi bi-lightbulb icon"></i></div>
-              <h4>Innovation</h4>
-              <p>Des solutions modernes et évolutives</p>
+              <h4 data-i18n="values.v3">Innovation</h4>
+              <p data-i18n="values.d3">Des solutions modernes et évolutives</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative value-item">
               <div class="icon"><i class="bi bi-shield-lock icon"></i></div>
-              <h4>Fiabilité</h4>
-              <p>Un service sécurisé et stable</p>
+              <h4 data-i18n="values.v4">Fiabilité</h4>
+              <p data-i18n="values.d4">Un service sécurisé et stable</p>
             </div>
           </div>
         </div>
@@ -343,7 +351,7 @@
     <section id="services" class="services section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
+        <h2 data-i18n="nav.services">Services</h2>
         <p class="text-center">
           Découvrez nos services complets, alliant expertise professionnelle,
           solutions numériques et techniques, maintenance informatique, et accompagnement
@@ -358,7 +366,7 @@
             <div class="service-item position-relative service-hover-card">
               <div class="icon"><i class="bi bi-shield-lock icon"></i></div>
               <h4>
-                <span class="stretched-link">Maintenance & Sécurité</span>
+                <span class="stretched-link" data-i18n="services.s1">Maintenance & Sécurité</span>
               </h4>
               <p>
                 Maintenance de matériel, sécurité des PC & serveurs,
@@ -366,11 +374,13 @@
               </p>
               <!-- New hover-only panel -->
               <div class="service-hover-details">
-                <div class="service-hover-title">🔐 Cyber sécurité</div>
+                <div class="service-hover-title"><span data-i18n="services.hover.s1.title">🔐 Cyber sécurité</span>
+                </div>
                 <ul>
-                  <li>Antivirus nouvelle génération</li>
-                  <li>Formation des employés aux bonnes pratiques</li>
-                  <li>Configuration GPO des serveurs et leur client (ordinateur)</li>
+                  <li><span data-i18n="services.hover.s1.li1">Antivirus nouvelle génération</span></li>
+                  <li><span data-i18n="services.hover.s1.li2">Formation des employés aux bonnes pratiques</span></li>
+                  <li><span data-i18n="services.hover.s1.li3">Configuration GPO des serveurs et leur client
+                      (ordinateur)</span></li>
                 </ul>
               </div>
             </div>
@@ -381,7 +391,7 @@
             <div class="service-item position-relative service-hover-card">
               <div class="icon"><i class="bi bi-code-slash icon"></i></div>
               <h4>
-                <span class="stretched-link">Développement Digital</span>
+                <span class="stretched-link" data-i18n="services.s2">Développement Digital</span>
               </h4>
               <p>
                 Création de sites web, applications mobiles/web/windows,
@@ -389,12 +399,13 @@
               </p>
               <!-- New hover-only panel -->
               <div class="service-hover-details">
-                <div class="service-hover-title">🌐 Développement Web & Digital</div>
+                <div class="service-hover-title"><span data-i18n="services.hover.s2.title">🌐 Développement Web &
+                    Digital</span></div>
                 <ul>
-                  <li>Sites vitrines et e-commerce</li>
-                  <li>Applications mobiles, web et desktop</li>
-                  <li>Automatisation et scripts</li>
-                  <li>Intégration API et bases de données</li>
+                  <li><span data-i18n="services.hover.s2.li1">Sites vitrines et e-commerce</span></li>
+                  <li><span data-i18n="services.hover.s2.li2">Applications mobiles, web et desktop</span></li>
+                  <li><span data-i18n="services.hover.s2.li3">Automatisation et scripts</span></li>
+                  <li><span data-i18n="services.hover.s2.li4">Intégration API et bases de données</span></li>
                 </ul>
               </div>
             </div>
@@ -405,20 +416,21 @@
             <div class="service-item position-relative service-hover-card">
               <div class="icon"><i class="bi bi-bar-chart icon"></i></div>
               <h4>
-                <span class="stretched-link">Analyse de données</span>
+                <span class="stretched-link" data-i18n="services.s3">Analyse de données</span>
               </h4>
               <p>
                 Analyse statistique avec SPSS, AMOS, Excel et autres outils
-                selon vos besoins professionnelles.
+                selon vos besoins professionnels.
               </p>
               <!-- New hover-only panel -->
               <div class="service-hover-details">
-                <div class="service-hover-title">📊 Analyse de données</div>
+                <div class="service-hover-title"><span data-i18n="services.hover.s3.title">📊 Analyse de données</span>
+                </div>
                 <ul>
-                  <li>Table de bord</li>
-                  <li>Tableau croisé dynamique</li>
-                  <li>Statistique descriptive</li>
-                  <li>Analyse prédictive</li>
+                  <li><span data-i18n="services.hover.s3.li1">Table de bord</span></li>
+                  <li><span data-i18n="services.hover.s3.li2">Tableau croisé dynamique</span></li>
+                  <li><span data-i18n="services.hover.s3.li3">Statistique descriptive</span></li>
+                  <li><span data-i18n="services.hover.s3.li4">Analyse prédictive</span></li>
                 </ul>
               </div>
             </div>
@@ -429,7 +441,7 @@
             <div class="service-item position-relative service-hover-card">
               <div class="icon"><i class="bi bi-bar-chart icon"></i></div>
               <h4>
-                <span class="stretched-link">Formation & Stages</span>
+                <span class="stretched-link" data-i18n="services.s4">Formation & Stages</span>
               </h4>
               <p>
                 Formation en informatique et digital, mise en relation avec
@@ -437,14 +449,15 @@
               </p>
               <!-- New hover-only panel -->
               <div class="service-hover-details">
-                <div class="service-hover-title">📈 Formation & Stages</div>
+                <div class="service-hover-title"><span data-i18n="services.hover.s4.title">📈 Formation & Stages</span>
+                </div>
                 <ul>
-                  <li>Formation en développement des applications</li>
-                  <li>Formation bureautique</li>
-                  <li>Formation algorithme</li>
-                  <li>Formation en gestion de projet</li>
-                  <li>Formation mise a niveau des employes</li>
-                  <li>Formation en cybersécurité</li>
+                  <li><span data-i18n="services.hover.s4.li1">Formation en développement des applications</span></li>
+                  <li><span data-i18n="services.hover.s4.li2">Formation bureautique</span></li>
+                  <li><span data-i18n="services.hover.s4.li3">Formation algorithme</span></li>
+                  <li><span data-i18n="services.hover.s4.li4">Formation en gestion de projet</span></li>
+                  <li><span data-i18n="services.hover.s4.li5">Formation mise a niveau des employes</span></li>
+                  <li><span data-i18n="services.hover.s4.li6">Formation en cybersécurité</span></li>
                 </ul>
               </div>
             </div>
@@ -454,19 +467,21 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative service-hover-card">
               <div class="icon"><i class="bi bi-bar-chart icon"></i></div>
-              <h4><span class="stretched-link">Saisie & Études</span></h4>
+              <h4><span class="stretched-link" data-i18n="services.s5">Saisie & Études</span></h4>
               <p>
-                Saisie de documents bureautiques, études de marché et rapports
+                <span data-i18n="services.hover.s5.li1">Saisie de documents bureautiques</span>, études de marché et
+                rapports
                 personnalisés.
               </p>
               <!-- New hover-only panel -->
               <div class="service-hover-details">
-                <div class="service-hover-title">🖥️ Saisie & Études</div>
+                <div class="service-hover-title"><span data-i18n="services.hover.s5.title">🖥️ Saisie & Études</span>
+                </div>
                 <ul>
-                  <li>Saisie de documents bureautiques</li>
-                  <li>Études de marché</li>
-                  <li>Rapports personnalisés</li>
-                  <li>Digitalisation des documents</li>
+                  <li><span data-i18n="services.hover.s5.li1">Saisie de documents bureautiques</span></li>
+                  <li><span data-i18n="services.hover.s5.li2">Études de marché</span></li>
+                  <li><span data-i18n="services.hover.s5.li3">Rapports personnalisés</span></li>
+                  <li><span data-i18n="services.hover.s5.li4">Digitalisation des documents</span></li>
                 </ul>
               </div>
             </div>
@@ -481,7 +496,7 @@
     <section id="work-process" class="work-process section light-background">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Processus de travail</h2>
+        <h2 data-i18n="process.title">Processus de travail</h2>
         <p class="text-center">
           Notre processus de travail se déroule en trois étapes clés
         </p>
@@ -497,24 +512,24 @@
               </div>
               <div class="steps-content">
                 <div class="steps-number">01</div>
-                <h3>Recherche &amp; analyse</h3>
+                <h3 data-i18n="process.p1">Recherche &amp; analyse</h3>
                 <p>
-                  Nous commençons par une analyse approfondie de vos besoins et de votre marché. Cette étape cruciale
-                  nous permet de définir une stratégie claire et de nous assurer que la solution finale sera
-                  parfaitement alignée avec vos objectifs.
+                  <span data-i18n="process.desc1">Nous commençons par une analyse approfondie de vos besoins et de votre
+                    marché. Cette étape cruciale nous permet de définir une stratégie claire et de nous assurer que la
+                    solution finale sera parfaitement alignée avec vos objectifs.</span>
                 </p>
                 <div class="steps-features">
                   <div class="feature-item">
                     <i class="bi bi-check-circle"></i>
-                    <span>Etude de marché</span>
+                    <span data-i18n="process.f1_1">Etude de marché</span>
                   </div>
                   <div class="feature-item">
                     <i class="bi bi-check-circle"></i>
-                    <span>Analyse des données</span>
+                    <span data-i18n="process.f1_2">Analyse des données</span>
                   </div>
                   <div class="feature-item">
                     <i class="bi bi-check-circle"></i>
-                    <span>Commentaires des utilisateurs</span>
+                    <span data-i18n="process.f1_3">Commentaires des utilisateurs</span>
                   </div>
                 </div>
               </div>
@@ -528,24 +543,25 @@
               </div>
               <div class="steps-content">
                 <div class="steps-number">02</div>
-                <h3>Conception &amp; planification</h3>
+                <h3 data-i18n="process.p2">Conception &amp; planification</h3>
                 <p>
-                  Une fois la stratégie définie, nous passons à la conception de l'interface utilisateur (UI) et de
-                  l'expérience utilisateur (UX). Nous créons des wireframes et des prototypes pour vous donner un aperçu
-                  concret de la solution avant de commencer le développement.
+                  <span data-i18n="process.desc2">Une fois la stratégie définie, nous passons à la conception de
+                    l'interface utilisateur (UI) et de l'expérience utilisateur (UX). Nous créons des wireframes et des
+                    prototypes pour vous donner un aperçu concret de la solution avant de commencer le
+                    développement.</span>
                 </p>
                 <div class="steps-features">
                   <div class="feature-item">
                     <i class="bi bi-check-circle"></i>
-                    <span>Wireframing</span>
+                    <span data-i18n="process.f2_1">Wireframing</span>
                   </div>
                   <div class="feature-item">
                     <i class="bi bi-check-circle"></i>
-                    <span>Conception UI/UX</span>
+                    <span data-i18n="process.f2_2">Conception UI/UX</span>
                   </div>
                   <div class="feature-item">
                     <i class="bi bi-check-circle"></i>
-                    <span>Prototypage</span>
+                    <span data-i18n="process.f2_3">Prototypage</span>
                   </div>
                 </div>
               </div>
@@ -559,24 +575,25 @@
               </div>
               <div class="steps-content">
                 <div class="steps-number">03</div>
-                <h3>Développement &amp; lancement</h3>
+                <h3 data-i18n="process.p3">Développement &amp; lancement</h3>
                 <p>
-                  Notre équipe de développeurs expérimentés donne vie au projet. Nous suivons les meilleures pratiques
-                  de l'industrie pour garantir un code de haute qualité. Après une phase de test rigoureuse, nous
-                  déployons la solution et assurons un suivi pour garantir une transition en douceur.
+                  <span data-i18n="process.desc3">Notre équipe de développeurs expérimentés donne vie au projet. Nous
+                    suivons les meilleures pratiques de l'industrie pour garantir un code de haute qualité. Après une
+                    phase de test rigoureuse, nous déployons la solution et assurons un suivi pour garantir une
+                    transition en douceur.</span>
                 </p>
                 <div class="steps-features">
                   <div class="feature-item">
                     <i class="bi bi-check-circle"></i>
-                    <span>Développement</span>
+                    <span data-i18n="process.f3_1">Développement</span>
                   </div>
                   <div class="feature-item">
                     <i class="bi bi-check-circle"></i>
-                    <span>Essai</span>
+                    <span data-i18n="process.f3_2">Essai</span>
                   </div>
                   <div class="feature-item">
                     <i class="bi bi-check-circle"></i>
-                    <span>Déploiement</span>
+                    <span data-i18n="process.f3_3">Déploiement</span>
                   </div>
                 </div>
               </div>
@@ -592,7 +609,7 @@
     <section id="team" class="team section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Équipe</h2>
+        <h2 data-i18n="nav.team">Équipe</h2>
         <p class="text-center">
           Une équipe engagée, compétente et passionnée, prête à relever vos
           défis et à transformer vos idées en succès.
@@ -608,10 +625,10 @@
               </div>
               <div class="member-info">
                 <h4>El Azbi Fouad</h4>
-                <span>Directeur technique</span>
-                <p>Software engineer & concept</p>
+                <span data-i18n="team.t1">Directeur technique</span>
+                <p data-i18n="team.d1">Software engineer & concept</p>
                 <a href="http://fouad-elazbi.netlify.app" class="read-more">
-                  <span>En savoir plus</span>
+                  <span data-i18n="team.more">En savoir plus</span>
                 </a>
               </div>
             </div>
@@ -624,12 +641,12 @@
               </div>
               <div class="member-info">
                 <h4>Chouklah Youssef</h4>
-                <span>Directeur commercial</span>
-                <p>
+                <span data-i18n="team.t2">Directeur commercial</span>
+                <p data-i18n="team.d2">
                   Responsable économique & marketing
                 </p>
                 <a href="./pages/youssef.html" class="read-more">
-                  <span>En savoir plus</span>
+                  <span data-i18n="team.more">En savoir plus</span>
                 </a>
               </div>
             </div>
@@ -643,9 +660,9 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-12 text-center">
-            <h3>Nos Outils</h3>
+            <h3 data-i18n="tools.title">Nos Outils</h3>
             <p class="text-center">
-              Technologies utilisées pour le développement de nos solutions
+              <span data-i18n="tools.desc">Technologies utilisées pour le développement de nos solutions</span>
             </p>
           </div>
         </div>
@@ -718,6 +735,22 @@
             style="vertical-align:top; margin:4px">
         </p>
       </div>
+      <div class="row justify-content-center mt-5 mb-5">
+        <div class="col-md-9 text-center ftco-animate">
+          <div class="gplay-card">
+            <h3 data-i18n="tools.gplay_title">Explore My Mobile Apps</h3>
+            <p data-i18n="tools.gplay_desc">Download our latest applications directly from the Google Play Store. From
+              daily utility tools to specialized educational applications, We focus on building intuitive, robust
+              solutions designed to solve real-world needs and simplify your everyday life.</p>
+            <div class="mt-4">
+              <a href="https://play.google.com/store/apps/developer?id=Fouad+El+Azbi" target="_blank"
+                class="gplay-badge">
+                <img src="assets/img/illustration/Gplay.png" alt="Get it on Google Play" height="60">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
     <!-- /Tools Section -->
@@ -727,8 +760,8 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>Témoignages</h2>
         <p class="text-center">
-          Découvrez ce que nos clients et partenaires disent de notre
-          engagement, notre expertise et la qualité de nos services.
+          <span data-i18n="testimonials.desc">Découvrez ce que nos clients et partenaires disent de notre engagement,
+            notre expertise et la qualité de nos services.</span>
         </p>
       </div>
       <!-- End Section Title -->
@@ -753,7 +786,7 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <h3>Karim Berrada</h3>
-                <h4>PDG &amp; Fondateur</h4>
+                <h4 data-i18n="testimonials.r1">PDG &amp; Fondateur</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -773,7 +806,7 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <h3>Clémentine Café</h3>
-                <h4> Propriétaire</h4>
+                <h4 data-i18n="testimonials.r2"> Propriétaire</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -794,7 +827,7 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <h3>Fatima Soulemani</h3>
-                <h4>Designer</h4>
+                <h4 data-i18n="testimonials.r3">Designer</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -815,7 +848,7 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <h3>Said Bahmou</h3>
-                <h4>Propriétaire du magasin</h4>
+                <h4 data-i18n="testimonials.r4">Propriétaire du magasin</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -836,7 +869,7 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <h3>Fouad Touzani</h3>
-                <h4>Freelancer</h4>
+                <h4 data-i18n="testimonials.r5">Freelancer</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -856,7 +889,7 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <h3>Hicham Baha</h3>
-                <h4>Entrepreneur</h4>
+                <h4 data-i18n="testimonials.r6">Entrepreneur</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -884,11 +917,10 @@
     <section id="faq-2" class="faq-2 section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Questions fréquemment posées</h2>
+        <h2 data-i18n="faq2.title">Questions fréquemment posées</h2>
         <p class="text-center">
-          Retrouvez ici les réponses aux questions les plus courantes pour
-          vous aider à mieux comprendre nos services et faciliter votre
-          expérience.
+          <span data-i18n="faq2.desc">Retrouvez ici les réponses aux questions les plus courantes pour vous aider à
+            mieux comprendre nos services et faciliter votre expérience.</span>
         </p>
       </div>
       <!-- End Section Title -->
@@ -898,7 +930,7 @@
             <div class="faq-container">
               <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Comment garantir la qualité de vos services ?</h3>
+                <h3><span data-i18n="faq2.q1">Comment garantir la qualité de vos services ?</span></h3>
                 <div class="faq-content">
                   <p>
                     Nous nous engageons à fournir des prestations rigoureuses,
@@ -913,8 +945,7 @@
               <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>
-                  Quels sont les délais moyens pour la réalisation d’un projet
-                  ?
+                  <span data-i18n="faq2.q2">Quels sont les délais moyens pour la réalisation d’un projet ?</span>
                 </h3>
                 <div class="faq-content">
                   <p>
@@ -930,7 +961,7 @@
               <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>
-                  Comment garantissez-vous la confidentialité de mes données ?
+                  <span data-i18n="faq2.q3">Comment garantissez-vous la confidentialité de mes données ?</span>
                 </h3>
                 <div class="faq-content">
                   <p>
@@ -947,8 +978,7 @@
               <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>
-                  Quels types de support offrez-vous après la livraison du
-                  projet ?
+                  <span data-i18n="faq2.q4">Quels types de support offrez-vous après la livraison du projet ?</span>
                 </h3>
                 <div class="faq-content">
                   <p>
@@ -964,8 +994,7 @@
               <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>
-                  Comment se déroule le processus de collaboration avec votre
-                  équipe ?
+                  <span data-i18n="faq2.q5">Comment se déroule le processus de collaboration avec votre équipe ?</span>
                 </h3>
                 <div class="faq-content">
                   <p>
@@ -989,11 +1018,10 @@
     <section id="contact" class="contact section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
+        <h2 data-i18n="nav.contact">Contact</h2>
         <p class="text-center">
-          N'hésitez pas à nous contacter pour toute demande d'information, devis
-          ou collaboration. Nous sommes à votre écoute pour répondre à vos
-          besoins.
+          <span data-i18n="contact.desc">N'hésitez pas à nous contacter pour toute demande d'information, devis ou
+            collaboration. Nous sommes à votre écoute pour répondre à vos besoins.</span>
         </p>
       </div>
       <!-- End Section Title -->
@@ -1004,21 +1032,18 @@
       <div class="container">
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-xl-9 text-center text-xl-start">
-            <h3>Appel à l'action</h3>
+            <h3 data-i18n="cta.title">Nous Contacter</h3>
             <p>
-              Transformez vos idées en solutions concrètes. De la conception à
-              la réalisation, nous donnons vie à vos projets grâce à une
-              expertise solide en développement, analyse de données et
-              accompagnement académique. Faites le choix de la performance, de
-              l’innovation et de l’excellence avec un partenaire de confiance.
-              Votre réussite est notre mission : ensemble, construisons des
-              solutions durables et intelligentes, pour aujourd’hui et pour
-              demain.
+              <span data-i18n="cta.desc">Transformez vos idées en solutions concrètes. De la conception à la
+                réalisation, nous donnons vie à vos projets grâce à une expertise solide en développement, analyse de
+                données et accompagnement académique. Faites le choix de la performance, de l’innovation et de
+                l’excellence avec un partenaire de confiance. Votre réussite est notre mission : ensemble, construisons
+                des solutions durables et intelligentes, pour aujourd’hui et pour demain.</span>
             </p>
           </div>
           <div class="col-xl-3 cta-btn-container text-center">
             <a class="cta-btn align-middle" href="tel:+212645994904">
-              Appel à l'action
+              Nous Contacter
             </a>
             <a href="https://api.whatsapp.com/send?phone=212645994904&text=Hello%20Mr%20Fouad%2C%20I%27m%20interested%20in%20your%20services."
               target="_blank" rel="noopener noreferrer" class="cta-btn align-middle">
@@ -1050,7 +1075,7 @@
           </div>
         </div>
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Liens utiles</h4>
+          <h4 data-i18n="footer.links">Liens utiles</h4>
           <ul>
             <li>
               <i class="bi bi-chevron-right"></i> <a href="#tools">Technologies utilisées</a>
@@ -1070,7 +1095,7 @@
           </ul>
         </div>
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nos Services</h4>
+          <h4 data-i18n="footer.services">Nos Services</h4>
           <ul>
             <li>
               <i class="bi bi-chevron-right"></i>
@@ -1082,7 +1107,7 @@
             </li>
             <li>
               <i class="bi bi-chevron-right"></i>
-              <span>Analyse des données</span>
+              <span data-i18n="process.f1_2">Analyse des données</span>
             </li>
             <li>
               <i class="bi bi-chevron-right"></i>
@@ -1091,10 +1116,10 @@
           </ul>
         </div>
         <div class="col-lg-4 col-md-12">
-          <h4>Suivez-nous</h4>
+          <h4 data-i18n="footer.follow">Suivez-nous</h4>
           <p>
-            Restez connecté(e) et suivez nos actualités, projets et offres sur
-            nos réseaux sociaux.
+            <span data-i18n="footer.f_desc">Restez connecté(e) et suivez nos actualités, projets et offres sur nos
+              réseaux sociaux.</span>
           </p>
           <div class="social-links d-flex">
             <!-- <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -1113,13 +1138,13 @@
       <p class="text-center">
         <span>© Copyright</span>
         <strong class="px-1 sitename">EAF Microservice</strong>
-        <span>Tous droits réservés.</span>
+        <span data-i18n="footer.rights">Tous droits réservés.</span>
       </p>
       <div class="credits">
-        Designed by EAF Microservice
+        <span data-i18n="footer.designed">Designed by EAF Microservice</span>
       </div>
       <br>
-      <div>"Votre succès est notre technologie" 🚀</div>
+      <div><span data-i18n="footer.slogan">"Votre succès est notre technologie" 🚀</span></div>
     </div>
   </footer>
   <!-- /footer -->
@@ -1138,6 +1163,9 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <!-- i18n & Theme JS -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/theme.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 </body>
